@@ -9,8 +9,6 @@
 #include <tuple>
 #include <iostream>
 #include <string>
-#include <stdexcept>
-#include <type_traits>
 #include <vector>
 #include "cmp_chain.hpp"
 
