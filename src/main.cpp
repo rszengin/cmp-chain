@@ -15,40 +15,6 @@
 #include "cmp_chain.hpp"
 
 
-std::tuple<double, char, std::string> get_student(int id) {
-	if (id == 0)
-		return std::make_tuple(3.8, 'A', "Lisa Simpson");
-	if (id == 1)
-		return std::make_tuple(2.9, 'C', "Milhouse Van Houten");
-	if (id == 2)
-		return std::make_tuple(1.7, 'D', "Ralph Wiggum");
-	throw std::invalid_argument("id");
-}
-
-
-template<typename Tuple, int ElemInx>
-class Print_tuple_elements {
-public:
-	void operator ()(const Tuple & tuple) {
-		Print_tuple_elements<Tuple, ElemInx - 1> {}(tuple);
-		std::cout << std::get<ElemInx>(tuple) << " ";
-	}
-};
-
-template<typename Tuple>
-class Print_tuple_elements<Tuple, 0> {
-public:
-	void operator ()(const Tuple & tuple) {
-		std::cout << std::get<0>(tuple) << " ";
-	}
-};
-
-template<typename... Types>
-void print_tuple(const std::tuple<Types...> & tuple) {
-	Print_tuple_elements<std::tuple<Types...>, std::tuple_size<std::tuple<Types...>>::value - 1> {}(tuple);
-	std::cout << std::endl;
-}
-
 int main() {
 
 	for (int inx = 0; inx < 20; ++inx) {
