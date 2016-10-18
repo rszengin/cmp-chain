@@ -1,2 +1,2 @@
-# cmp_chain
+# cmp-chain
 Template based chained comparisons
