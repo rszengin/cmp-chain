@@ -1,2 +1,2 @@
 # cmp-chain
-Template based chained comparison
+Tuple based chained comparison
