@@ -53,7 +53,7 @@ public:
 	}
 
 	constexpr inline operator bool() {
-		return Implement<0, std::tuple_size<std::tuple<Types...>>::value - 2, Types...>::comparison(operands);
+		return Implement<0, sizeof...(Types) - 2, Types...>::comparison(operands);
 	}
 };
 
