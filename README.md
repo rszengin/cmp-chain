@@ -1,2 +1,2 @@
-# cmp-chain
+# tuple-chain
 Tuple based chained comparison
